@@ -31,7 +31,7 @@ router.post("/register", (req, res) => {
         lvl: req.body.lvl,
         email: req.body.email,
         password: req.body.password
-      });// Hash password before saving in database
+      });
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
@@ -48,31 +48,30 @@ router.post("/register", (req, res) => {
 
 
 router.post("/login", (req, res) => {
-  const { errors, isValid } = validateLoginInput(req.body);// Check validation
+  const { errors, isValid } = validateLoginInput(req.body);
   if (!isValid) {
     return res.status(400).json(errors);
   }
   const email = req.body.email;
   const password = req.body.password;
   User.findOne({ email }).then(user => {
-    // Check if user exists
+   
     console.log(user)
     if (!user) {
       return res.status(404).json({ emailnotfound: "Email not found" });
-    }// Check password
+    }
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {
-        // User matched
-        // Create JWT Payload
+     
         const payload = {
           id: user.id,
           pseudo: user.pseudo
-        };// Sign token
+        };
         jwt.sign(
           payload,
           keys.secretOrKey,
           {
-            expiresIn: 31556926 // 1 year in seconds
+            expiresIn: 31556926 
           },
           (err, token) => {
             res.json({
@@ -103,9 +102,9 @@ router.route('/:pseudo').get((req, res) => {
 router.post("/addFriend/:pseudo", (req, res) => {
 
   const pseudo = req.params.pseudo;
-  const user = req.body.user;// Find user by email
+  const user = req.body.user;
   User.findOne({ pseudo }).then(user => {
-    // Check if user exists
+   
     console.log(user)
     if (!user) {
       return res.status(404).json({ emailnotfound: "Email not found" });
