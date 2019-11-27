@@ -14,7 +14,6 @@ class Connected extends React.Component{
             connected: []
         };
 
-        this.socket = io('belkacemsocial.yj.fr');
 
         this.socket.emit('CONNECTED_USER', {
           user: decoded.pseudo,
