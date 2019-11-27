@@ -13,7 +13,7 @@ class Connected extends React.Component{
         this.state = {
             connected: []
         };
-
+         this.socket = io();
 
         this.socket.emit('CONNECTED_USER', {
           user: decoded.pseudo,
