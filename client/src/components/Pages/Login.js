@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-import setAuthToken from "../../setAuthToken.js";
 
 
 class Login extends Component {
@@ -21,7 +20,6 @@ class Login extends Component {
       .then(res => {
          const { token } = res.data;
          localStorage.setItem("jwtToken", token);
-         setAuthToken(token);
          const decoded = jwt_decode(token);
          this.props.isAuthedCheck(true,decoded.pseudo,decoded.id)
        })
