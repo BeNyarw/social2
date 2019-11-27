@@ -18,7 +18,7 @@ app.use(
   })
 );
 app.use(bodyParser.json());// DB Config
-
+app.use(express.static('client/build'))
 mongoose.connect(db,{ useNewUrlParser: true }).then(
     () => console.log("MongoDB successfully connected")
   ).catch(err => console.log(err));// Passport middleware
