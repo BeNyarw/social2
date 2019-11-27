@@ -19,7 +19,7 @@ class Register extends Component {
     let obj =  {pseudo : this.state.pseudo, email : this.state.email,password : this.state.password,password2 : this.state.password2,lvl : 'user'}
     console.log(obj)
     axios
-      .post("http://localhost:5000/api/users/register", obj)
+      .post("/api/users/register", obj)
       .then(res => {
          this.props.history.push("/login")
        }).catch(err =>{
