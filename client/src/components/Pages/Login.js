@@ -25,7 +25,7 @@ class Login extends Component {
          const decoded = jwt_decode(token);
          this.props.isAuthedCheck(true,decoded.pseudo,decoded.id)
        })
-      this.props.history.push("/")
+      this.props.history.push("/dashboard")
 }
 
   render() {
