@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+#content-dashboard{
+  display: flex;
+  margin: 0 auto;
+  width : 80%;
+  justify-content: center;
+  margin-top : 20px;
+}
+.panel-dashboard{
+  width: 33%;
+  min-height : 80vh;
+}
+.post-dashboard{
+  width: 100%
+}
+#other{
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+.mini-block{
+  flex : 1;
+  overflow-y: scroll;
+}
+#chat{
+  display: flex;
+}
+.chat-wrapper{
+  height : 100%;
+  width: 100%;
+}
+.messages-chat{
+  height : 80%;
+  width : 100%;
+}
+.input-chat{
+  height : 10%;
+  display: flex;
+  width: 100%;
+}
+.text-input-chat{
+  flex: 1
+}
+.send-chat{
+  flex: 0
+}
+.nav-wraper{
+  height : 5vh;
+  min-height: 60px;
+  background-color: #1313131c;
+  color :#fff;
+  display:flex;
+  justify-content: space-between;
+  padding : 0 50px;
+}
+.nav-wraper a{
+  color :#fff;
+  text-decoration: none;
+}
+.App{
+  font-family: 'Raleway', sans-serif;
+  background: rgb(36,0,15);
+background: linear-gradient(90deg, rgba(36,0,15,0.7903362028405112) 0%, rgba(121,9,47,1) 17%, rgba(255,166,0,1) 80%);
+height: 100%;
+min-height: 100vh
+}
+.connected-link{
+  display: flex;
+  justify-content: space-between;
+}
+.discover-Link{
+  margin : 0 20px
+}
+.logout-Link{
+  margin : 0 20px
+}
+.login-Link{
+  margin : 0 20px
+}
+.register-Link{
+  margin : 0 20px
+}
+.disconnected-link{
+  display: flex;
+  justify-content: space-between;
+}
+.homepage-wrapper{
+  height : calc(100vh - 60px);
+  color : #fff;
+  overflow : hidden;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin : 0 auto;
+}
+.section-homepage{
+  width : 40%;
+}
+.login-Wrapper{
+  height : calc(100vh - 60px);
+  color : #fff;
+  overflow : hidden;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin : 0 auto;
+}
+.login-Wrapper>form{
+  padding  : 20px;
+  background-color: white;
+  margin-top: 20px;
+  height : 50vh;
+}
+#content-dashboard>div{
+  margin : 10px;
+padding : 10px;
+}
+.panel-dashboard>h4{
+  margin : 0px;
+  color :#fff
+
+}
+.addPost{
+  min-height: 100px;
+  margin-bottom: 50px;
+  padding : 10px;
+}
+.addPost>h4{
+  margin: 0px;
+}
+.post-dashboard{
+  margin-bottom : 10px;
+}
+#description{
+  display: flex;
+flex-direction: column;
+max-height: 80vh;
+}
+.mini-block{
+  margin : 10px 0px;
+  height : 300px;
+  padding: 10px;  color : black;
+}
+#post-of-user{
+  width: 80vw;
+margin: 20px auto;
+}
+
+.connected-wrapper>div:nth-child(odd) {
+  background-color: rgba(206, 204, 204, 0.87);
+}
+.messages>div:nth-child(odd) {
+  background-color: rgba(206, 204, 204, 0.87);
+}
